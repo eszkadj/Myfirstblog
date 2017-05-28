@@ -4,8 +4,19 @@
         <title>Agnieszka's blog</title>
     </head>
     <body>
+
+    {% for post in post %}
+    	    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+	{% endfor %}
+
         <div>
-            <h1><a href="">Django Girls Blog To jest mój blok</a></h1>
+            <h1><a href="">Django Girls Blog To jest mój blok
+            {{post}}
+            </a></h1>
         </div>
 
         <div>
